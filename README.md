@@ -1,7 +1,6 @@
 # Intro to Python: Package management and virtual environment
 
-Summary: Today we will help you acquire basic knowledge about how to manage libraries in
-Python and work with virtual environments.
+Summary: Today we will help you acquire basic knowledge about how to manage libraries in Python and work with virtual environments.
 
 💡 [Tap here](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624) **to leave your feedback on the project**. It's anonymous and will help our team make your educational experience better. We recommend completing the survey immediately after the project.
 
@@ -14,17 +13,17 @@ Python and work with virtual environments.
 3. [Chapter III](#chapter-iii) \
     3.1. [Specific instructions for the day](#specific-instructions-for-the-day)
 4. [Chapter IV](#chapter-iv) \
-    4.1. [Exercise 00: Virtual Environment](#exercise-00-virtual-environment)
+    4.1. [Exercise 00. Virtual Environment](#exercise-00-virtual-environment)
 5. [Chapter V](#chapter-v) \
-    5.1. [Exercise 01: Installing a package](#exercise-01-installing-a-package)
+    5.1. [Exercise 01. Installing a package](#exercise-01-installing-a-package)
 6. [Chapter VI](#chapter-vi) \
-    6.1. [Exercise 02: Installing many libraries](#exercise-02-installing-many-libraries)
+    6.1. [Exercise 02. Installing many libraries](#exercise-02-installing-many-libraries)
 7. [Chapter VII](#chapter-vii) \
-    7.1. [Exercise 03: Very beautiful soup](#exercise-03-very-beautiful-soup)
+    7.1. [Exercise 03. Very beautiful soup](#exercise-03-very-beautiful-soup)
 8. [Chapter VIII](#chapter-viii) \
-    8.1. [Exercise 04: Profiling](#exercise-04-profiling)
+    8.1. [Exercise 04. Profiling](#exercise-04-profiling)
 9. [Chapter IX](#chapter-ix) \
-    9.1. [Exercise 05: PyTest](#exercise-05-pytest)
+    9.1. [Exercise 05. PyTest](#exercise-05-pytest)
     
    
 ## Chapter I
@@ -47,26 +46,19 @@ Python and work with virtual environments.
 
 ### Instructions
 
-* Use this page as the your only reference. Do not listen to any rumors or speculations
-about how to prepare your solution.
-* Here and further on we use Python 3 as the only correct version of Python.
-* The solutions for python exercises (module01, module02, module03) must have the
-following block in the end: `if __name__ == ‘__main__’`.
+* Use this page as your only reference. Do not pay attention to rumors or speculation about how to prepare your solution.
+* Here and throughout, we use Python 3 as the only correct version of Python.
+* The python files for python exercises (module01, module02, module03) must have the following block at the end: `if __name__ == ‘__main__’`.
 * Pay attention to the permissions of your files and directories.
 * To be assessed your solution must be in your GIT repository.
-* Your solutions will be evaluated by your piscine mates.
-* You should not leave any additional files in your directory other than those explicitly
-specified in the subject. It is recommended that you modify your .gitignore to avoid
-accidents.
+* Your solutions will be evaluated by your peers in the bootcamp.
+* You should not leave any other files in your directory other than those explicitly specified in the exercise instructions. It is recommended that you modify your .gitignore to avoid any accidents.
 * Your solution must be in your GIT repository for evaluation. Always push only to the develop branch! The master branch will be ignored. Work in the src directory.
-* When you need to get precise output in your programs, it is forbidden to display a
-precalculated output instead of performing the exercise correctly.
-* Have a question? Ask your neighbor on the right. If that fails, try your neighbor
-on the left.
-* Your reference material: peers / Internet / Google.
-* You can ask questions in Slack.
-* Read the examples carefully. They may require things that are not otherwise specified in the subject.
-* And may the Force be with you!
+* When you need to get precise output in your programs, it is forbidden to display a precalculated output instead of performing the exercise correctly.
+* Have a question? Ask your neighbor on the right. If that fails, try your neighbor on the left.
+* Your reference materials are your peers, the internet, and Google.
+* Read the examples carefully. They may require information that is not specified elsewhere in the subject.
+* May the Force be with you!
 
 ## Chapter III
 
@@ -78,114 +70,71 @@ on the left.
     if __name__ == '__main__':
         # your tests and your error handling
     ```
-* Any exception not caught will invalidate your work, even in the event of an error
-that you were asked you to test.
-* No imports are allowed, except those explicitly mentioned in the section “Allowed functions” of the title block of each exercise.
+* Any exception that goes uncaught will invalidate your work, even if it is an error that you were asked to test.
+* No imports are allowed except those mentioned in the "Allowed Functions" section of each exercise's title block.
 
 ## Chapter IV
 
-### Exercise 00: Virtual Environment
+### Exercise 00. Virtual Environment
 
-Exercise 00
+- Turn-in directory: `ex00/`.
+- Files to turn in: `venv.py` and the folder with your virtual env.
+- Allowed functions: `import os`.
 
-Virtual Environment
+**Libraries**, also known as **packages**, are one of the ways coding has become more accessible. It has never been easier to learn to code and quickly see results. Some programmers have written code that can be reused by others. Many of these Python libraries are open source, meaning everyone can use them. There is no need to write existing classes, methods, or functions from scratch because you can reuse them. All you need to do is run the command `sudo pip install`. Or wait...
 
-Turn-in directory: ex00/
+This method of installing Python packages is considered poor practice. When you install them as described above, you install them in the system version of Python. Python exists on your machine not only to give you the power to code, but also to run essential system programs. Installing external packages like that may ruin your system. You almost never need to use sudo pip install.
 
-Files to turn in: venv.py and the folder with your virtual env
+A better way is to use **virtual environments**. Think of it as your own little sandbox where you can do whatever you want. If you mess something up, it only affects this sandbox. Your machine should have a package called `virtualenv` preinstalled. If not, contact the administrators or install it yourself if you are working on your personal computer. We will use it in the following exercises and projects.
 
-Allowed functions: import os
+This exercise is simple and just meant to warm you up and introduce you to the concept of virtual environments. What you need to do is:
 
-Libraries, or in other words packages, are one of the means by which coding has been
-democratized. It has never been easier to learn to code and get quick results from this
-process. Some programmers have written pieces of code that can be reused by other
-coders. And many of these libraries in Python are open-sourced, which means everybody
-can use them. Nobody needs to write such already existing classes, methods, or functions
-from scratch you can reuse them. All you need to do is sudo pip install. Or wait...
-
-This way of installing Python packages is considered bad practice. When you do it
-as described above, you install them in the system version of Python. And Python exists
-on your machine not only to give you the power to code but to run some programs that
-are essential programs for the system. By installing external packages like that you may
-ruin your system. So you almost never need to sudo pip install.
-
-There is a better way – virtual environments. Think of it as your own little sandbox
-where you can do whatever you want. If you ruin something, you ruin it only inside
-this sandbox. Your machine should have a package called virtualenv preinstalled. If not,
-please, contact the administrators or install it by yourself if you are working on your
-personal computer. We will use it in the following exercises and projects.
-
-This exercise is pretty simple; it’s just meant to warm you up and get you acquainted
-with the concept of virtual environments. What you need to do is:
-
-* create a virtual environment with your nickname as its name using Python 3 (you
-will work with this env here and further on),
-* activate it,
-* run Python 3 from the terminal,
-* print the virtual env name using os library,
-* write a small python script that does that thing by calling it in command-line:
+1. Create a virtual environment with your nickname as the name using Python 3. You will work with this environment throughout the course.
+2. Activate it.
+3. Run Python 3 from the terminal.
+4. Print the virtual environment name using the os library.
+5. Write a small Python script that does this by calling it from the command line: 
     ```
     $ ./venv.py
     Your current virtual env is /Users/McShtuder/shtuder
     ```
-* deactivate the environment,
-* run the script again ...
+6. Deactivate the environment.
+7. Run the script again.
 
-If you get a KeyError or None value or an exception while deactivating the env, consider why it happened.
-You do not have to fix it in this exercise, but be ready to explain why it happened.
+If you encounter a KeyError, a None value, or an exception while deactivating the environment, consider why it occurred. You don't need to fix it for this exercise, but be prepared to explain what happened.
 
 ## Chapter V
 
-### Exercise 01: Installing a package
+### Exercise 01. Installing a package
 
-Installing a package
+- Turn-in directory: `ex01/`.
+- Files to turn in: `pies_bars.sh`, the file with the data and the folder with your virtual env.
+- Allowed functions: no restrictions.
 
-Turn-in directory: ex01/
+Let us install the first package in your virtual environment! We will work with the `termgraph` library a bit. It allows you to draw graphs and diagrams directly in your terminal. What could be cooler?
 
-Files to turn in: pies_bars.sh, the file with the data and the folder with
-your virtual env
-
-Allowed functions: no restrictions
-
-* Let us install the first package in your virtual environment!
-* We will work with the library termgraph a bit. It gives you the power to draw
-graphs and diagrams right in your terminal. What could be cooler?
-* Install the library in the virtual environment created in the previous exercise.
-* Make exactly the same visualization as below but with a different color scheme
-(create a file for the visualization by yourself):
+1. Install the library in the virtual environment created in the previous exercise.
+2. Make the same visualization as below, but with a different color scheme. Create a file for the visualization yourself.
 
     ![pies-bar](misc/images/pies-bar.png)
 
-* Make a shell script file for this purpose with the name pies_bars.sh. It contains
-only the part for making the graph without activation and deactivation of the env.
+3. Make a shell script file for this purpose named `pies_bars.sh`. It should only contain the part for making the graph, without the activation and deactivation of the env.
 
 ## Chapter VI
 
-### Exercise 02: Installing many libraries
+### Exercise 02. Installing many libraries
 
-Exercise 02
+- Turn-in directory: `ex02/`.
+- Files to turn in: `librarian.py` and the archive with your virtual env.
+- Allowed functions: no restrictions.
 
-Installing many libraries
+During the following exercises, you will work with several different libraries. For this exercise, you need to prepare your virtual environment.
 
-Turn-in directory: ex02/
-
-Files to turn in: librarian.py and the archive with your virtual env
-
-Allowed functions: no restrictions
-
-During the following exercises, you will work with several different libraries. In this
-exercise, you need to prepare your virtual environment for them.
-Install the latest release of BeautifulSoup and PyTest. It is prohibited to install them
-one by one (pip install x, pip install y). It is prohibited to use loops. Find a clever way
-to do it, use installation via requirements.
-
-Write a python script called librarian.py that:
-
-* checks that it runs inside the correct env
-* installs the libraries
-* displays all the installed libraries at the end like this (doesn’t have to be exactly the same
-list):
-
+1. Install the latest releases of BeautifulSoup and PyTest. Installing them one by one (`pip install x; pip install y`) is prohibited. Using loops is also prohibited. Find a clever way to do it; use installation via requirements.
+2. Write a Python script called librarian.py that:
+- checks that it runs inside the correct env;
+- installs the libraries;
+- displays all the installed libraries at the end like this (it doesn't have to be an exact list):
     ```
     six==1.14.0
     soupsieve==2.0
@@ -193,46 +142,25 @@ list):
     wcwidth==0.1.9
     zipp==3.1.0
     ```
-* saves it to requirements.txt
-
-Put an archive of your env in the folder. You can put archivation in your code or you
-can do it from the command line. The archive may be compressed if you think that would
-be useful. If the script was called from the wrong env, there should be an exception.
+- saves it to `requirements.txt`.
+3. Place an archive of your environment in the folder. You can either put the archive in your code or do it from the command line. You can compress the archive if you think that would be useful. If the script was called from the wrong environment, an exception should be thrown.
 
 ## Chapter VII
 
-### Exercise 03: Very beautiful soup
+### Exercise 03. Very beautiful soup
 
-Exercise 03
+- Turn-in directory: `ex03/`.
+- Files to turn in: `financial.py`.
+- Allowed functions: no restrictions.
 
-Very beautiful soup
+Okay, so you installed two libraries in the previous exercise. Now, let's work with one of them: **BeautifulSoup**. It's useful when you need to parse a website that doesn't have an API, as was the case with HeadHunter on Day 00. The problem is that when you parse a webpage, you get not only useful information, but also HTML markup, which can be difficult to work with. This package helps you navigate different HTML blocks and classes, making it easier to extract the information you need. Keep in mind, though, that it is not a parser itself; it just helps you navigate the HTML or XML mess (meaning that you need to install an HTTP library of your choice in your environment).
 
-Turn-in directory: ex03/
-
-Files to turn in: financial.py
-
-Allowed functions: no restrictions
-
-Ok, so you have installed 2 libraries in the previous exercise. Let us work with one
-of them BeautifulSoup. It is very useful when you need to parse a website that does not
-have an API (As was the case with HeadHunter on day00). The problem is that when
-you parse a webpage, you get not only useful information but also HTML markup that
-will be a pain for you. This package helps you navigate in different blocks and classes
-in HTML, making easier to extract what you really need from them. But keep in mind
-that it is not a parser itself, it just helps you navigate in the mess of HTML or XML
-(meaning that you need to install an HTTP-library as per your own taste in your env).
-
-In this exercise, you will parse Yahoo Finance (yeah, it has an API, but for learning
-purposes let us forget about that). You will need to visit a [page like this](https://finance.yahoo.com/quote/msft/financials?p=msft) and get some
-data for a specific field of a specific company.
+For this exercise, you will parse Yahoo Finance. Yes, it has an API, but for learning purposes, let's forget about that. Visit a [page like this](https://finance.yahoo.com/quote/msft/financials?p=msft) and get some data for a specific field of a specific company.
 
 Write a Python script that:
-
-* gets: as the arguments the ticker symbol and the field of the table (for example,
-MSFT, Total Revenue)
-* returns: the tuple that contains the requested information
-* special conditions: add a ’sleep for 5 seconds’ inside your script (we will need it
-later)
+- gets the ticker symbol and the field of the table as arguments (for example, MSFT, Total Revenue);
+- returns the tuple containing the requested information;
+- special conditions: add a "sleep for 5 seconds" inside your script (we will need it later).
 
 The example:
 ```
@@ -241,80 +169,41 @@ $ ./financial.py 'MSFT' 'Total Revenue'
 '89,950,000', '85,320,000')
 ```
 
-If the URL does not exist, raise an exception. If the requested field does not exist,
-raise an exception.
+If the URL does not exist, raise an exception. Do the same if the requested field does not exist.
 
 ## Chapter VIII
 
-### Exercise 04: Profiling
+### Exercise 04. Profiling
 
-Exercise 04
+- Turn-in directory: `ex04/`.
+- Files to turn in: `financial.py`, `financial_enhanced.py`, `profiling-sleep.txt`, `profiling-tottime.txt`, `profiling-http.txt`, `profiling-ncalls.txt`.
+- Allowed functions: no restrictions.
 
-Profiling
+It's unlikely that you'll ever write code that's 100% perfect without room for improvement. You will likely need to determine why your scripts aren't working as quickly as you'd like. For such purposes, we have profilers. According to Wikipedia, profiling is a form of dynamic program analysis that measures the spatial or temporal complexity of a program, the usage of particular instructions, and the frequency and duration of function calls, among other things. Profiling information is most commonly used to optimize programs.
 
-Turn-in directory: ex04/
+Remember your script from the previous exercise? Let's optimize it. Even if you are a programming guru, one of the structures was not very effective (we asked you to do it that way).
 
-Files to turn in: financial.py, financial_enhanced.py, profiling-sleep.txt, profiling-tottime.txt,
-profiling-http.txt, profiling-ncalls.txt
-
-Allowed functions: no restrictions
-
-There is no chance that you will write code 100% perfectly in the future without any
-scope for improvement. You will likely have to figure out why your scripts don’t work
-as fast as you want. And we have the thing for such purposes - profilers. According to
-Wikipedia, profiling is a form of dynamic program analysis that measures, for example,
-the spatial or temporal complexity of a program, the usage of particular instructions,
-or the frequency and duration of function calls. Most commonly, profiling information
-serves to aid program optimization.
-
-Remember your script from the previous exercise? Let us optimize it. Even if you are
-a programming guru, there was one structure that was not very effective (we asked you
-to do it that way).
-
-* Applying cProfile to your script financial.py, get a table of the functions used sorted
-in descending order by total time spent on their execution. Save it to the file profiling-
-sleep.txt.
+1. Apply cProfile to your `financial.py` script to get a table of the functions used, sorted in descending order by total execution time. Save it to the `profiling-sleep.txt` file.
 
     ![1](misc/images/1.png)
 
-* Delete the line with time.sleep(5) from your script and run the profiling again.
-You should get a new table without built-in method time.sleep. Save it to the file
-profiling-tottime.txt
-* Try using another HTTP-client library to see if your script got any faster. Save the new
-script to financial_enhanced.py. Save the result of the profiling to the file profiling-http.txt
-* Get the same table but sorted in descendingly order by number of calls. Sometimes it is
-useful to know: that you can choose to optimize those functions to make them call fewer
-times. Save the table to the file profiling-ncalls.txt
-* This time use the library pstats. Sort by cumulative time and get the top 5 Save it to the file
-pstats-cumulative.txt
+2. Remove the line containing `time.sleep(5)` from your script, then run the profiling again. You should get a new table without the built-in method `time.sleep()`. Save it to the file `profiling-tottime.txt`.
+3. Try using a different HTTP client library to see if your script runs faster. Save the new script as `financial_enhanced.py`. Save the profiling results to the file `profiling-http.txt`.
+4. Get the same table, but sorted in descending order by number of calls. It is sometimes useful to know that you can choose to optimize those functions so that they are called fewer times. Save the table to `profiling-ncalls.txt`.
+5. This time, use the `pstats` library. Sort by cumulative time and get the top five. Save it to the file `pstats-cumulative.txt`.
 
 ## Chapter IX
 
-### Exercise 05: PyTest
+### Exercise 05. PyTest
 
-Exercise 05
+- Turn-in directory: `ex05/`.
+- Files to turn in: `financial_test.py`.
+- Allowed functions: no restrictions.
 
-PyTest
+The speed of your script is not the only issue to consider. It may not work as you intended from the start. To ensure that the script works properly, you need to conduct unit tests. For example, provide different inputs and verify that the outputs are as expected.
 
-Turn-in directory: ex05/
-
-Files to turn in: financial_test.py
-
-Allowed functions: no restrictions
-
-Well, the speed of your script is not the only issue to consider. Your script may not
-work as you intended from the start. To be sure that the script works properly, you need
-to conduct unit tests: for example, to give different things as the input and make sure
-that it returns what expected.
-
-We are sure that in ex03 you used one or more functions. For each of the functions,
-you need to create at least 3 tests using the library PyTest. Check if your script gives
-the correct information for the request:
-
-* If I ask for Total Revenue, do I get the total revenue for the given ticker?
-* Is the type of the return a tuple?
-* If I give an invalid ticker name, do I get an exception?
-
-Modify your script financial.py by adding the tests into the code. Put the file in your
-directory with the name financial_test.py. Run PyTest. Your tests should have passed.
-If not, work on your script to make it ready.
+1. In ex03, we are sure that you used one or more functions. For each function, create at least three tests using the PyTest library. Check if your script provides the correct information for each request:
+    - If I ask for Total Revenue, does it return the total revenue for the given ticker?
+    - Is the return type a tuple?
+    - If I enter an invalid ticker name, does an exception occur?
+2. Add the tests to the code in your `financial.py` script. Save the file in your directory as `financial_test.py`. Run PyTest. Your tests should have passed. If not, work on your script to prepare it.
