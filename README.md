@@ -108,7 +108,7 @@ If you encounter a KeyError, a None value, or an exception while deactivating th
 ### Exercise 01. Installing a package
 
 - Turn-in directory: `ex01/`.
-- Files to turn in: `pies_bars.sh`, the file with the data and the folder with your virtual env.
+- Files to turn in: `pies_bars.sh`, the file with the data and the folder with your virtual env from the previous exercise.
 - Allowed functions: no restrictions.
 
 Let us install the first package in your virtual environment! We will work with the `termgraph` library a bit. It allows you to draw graphs and diagrams directly in your terminal. What could be cooler?
