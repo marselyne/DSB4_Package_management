@@ -1,0 +1,15 @@
+Fri Jan 16 16:36:17 2026    ex04/profile.out
+
+         954604 function calls (929171 primitive calls) in 2.925 seconds
+
+   Ordered by: cumulative time
+   List reduced from 2011 to 5 due to restriction <5>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    155/1    0.000    0.000    2.925    2.925 {built-in method builtins.exec}
+        1    0.000    0.000    2.925    2.925 ex04/financial.py:3(<module>)
+        1    0.000    0.000    2.721    2.721 ex04/financial.py:55(main)
+        1    0.000    0.000    2.720    2.720 ex04/financial.py:8(get_financial_data)
+        1    0.000    0.000    2.474    2.474 /Users/maksim/School21/DSB4_Package_management.ID_1577671-1/src/ex00/denishac/lib/python3.9/site-packages/requests/api.py:62(get)
+
+
