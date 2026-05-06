@@ -44,7 +44,7 @@ def get_financial_data(ticker, field):
     for i in range(len(texts)):
         if texts[i].strip().lower() == target:
             for j in range(6):
-                if i + j < len(texts):
+                if i + j < len(texts):  
                     result.append(texts[i + j])
             break
 
